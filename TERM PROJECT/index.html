@@ -1,0 +1,347 @@
+<!-- HOME PAGE --> 
+<!DOCTYPE html>
+<html lang="en">
+<!-- This program displays Home Page -->
+<head>
+<title> HOME | The Elite's Galley</title>
+<link rel="icon" href="images/logo1.jpg" type="image/x-icon">
+<!-- linking of the hamburger menu logo-->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css"/>
+
+
+<!-- meta tags are here --> 
+
+<meta charset="utf-8">
+<meta name="description" content="Restaurant Home Page">
+<meta name="keywords" content="CIS 145,Web Engineering, UFV, Web development, Restaurant">
+<meta name="author" content="Sarthak Batra, Radhika Aggi, Harashdeep Singh Chahal, Sanil Paul"> 
+<meta name="robots" content="all"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<!-- internal css-->
+<style>
+
+/* universal selector */
+* { font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  text-decoration: none;
+  color: black;
+    }
+
+    body, html {
+      height: 100%;
+    }
+/* Back to the top button*/
+#myBtn {
+  position: fixed;
+  bottom: 10px;
+  float: right;
+  right: 50.5%;
+  left: 90.25%;
+  max-width: 50px;
+  width: 10%;
+  font-size: 20px;
+  border-color: rgba(85, 85, 85, 0.2);
+  padding: .5px;
+  border-radius: 4px;
+  color: #ffff;
+  z-index: 10;
+}
+
+    /* css for navigation bar  */
+  nav {
+    height: 80px;
+    background-color:  rgb(131, 129, 126);
+    z-index: 10;
+    position: fixed;
+    width: 100%;
+  }
+
+  
+  nav ul {
+    float: right;
+    margin-right: 20px;
+  }
+  
+  nav ul li , .name {
+    display: inline-block;
+    line-height: 80px;
+    margin: 0 5px;
+  }
+  .name  {
+    padding: 7px 13px;
+    font-size: 25px;
+  }
+  nav ul li a  {
+    font-size: 17px;
+    padding: 7px 13px;
+    border-radius: 3px;
+    color: blanchedalmond;
+    
+  }
+/* hovering effect */
+  nav a:hover { background: #b4a5a5;
+  }
+
+  .checkbtn {
+    font-size: 30px;
+    color: #ffff;
+    float:right;
+    line-height: 80px;
+    margin-right: 40px;
+    cursor: pointer;
+    display: none;
+  }
+
+  #check {
+    display: none;
+  }
+
+  /* media queries for differnt screens */
+  
+  @media (max-width: 952px) {
+    nav ul li a {
+      font-size: 12px;
+    }
+  }
+
+  @media (max-width: 1140px)  {
+    .checkbtn {
+      display: block;
+    }
+    ul {
+      position: relative;
+      width: 100%;
+      height: 100vh;
+      background: none;
+      text-align: center;
+      top: 0%;
+      left: -100%;
+      transition: all .5s;
+      background:  rgb(131, 129, 126);
+    }
+
+    nav ul li {
+      display: block;
+      margin: 50px 0;
+      line-height: 30px;
+    }
+    nav ul li a  {
+      font-size: 20px;
+    }
+
+    a:hover {
+      background: #b4a5a5;
+    }
+
+    #check:checked ~ ul {
+      left:0;
+    }
+    .elite p {
+      font-size: 12px;
+    }
+  
+  }
+ 
+  /* using parallax */
+  .parallaxhome {
+    /* The image used */
+    background-image: url('images/front.jpg');
+    height: 90%; 
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+
+  .parallaxhome1 {
+    /* The image used */
+    background-image: url('images/front1.jpg');
+    height: 90%; 
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  /* css for banner on 2nd parallax */
+.banner-text {
+  position: absolute;
+  top: 160%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  text-align: center;
+  background-color: #eeebdd;
+  opacity: 0.7;
+  line-height: 30px;
+}
+  
+/* css for parrallax */
+  @media only screen and (max-device-width: 1366px) {
+    .parallaxhome , .parallaxhome1 {
+      background-attachment: fixed;
+    }
+  }
+
+
+/* css for introduction */
+
+  .elite h2 {
+    background-color: rgb(204, 199, 186);
+    padding-top: 4%;
+  }
+  .elite p {
+    background-color: rgb(204, 199, 186);
+ font-size:24px;
+ padding-top: 1%;
+ padding-bottom: 1%;
+line-height: 40px;
+  }
+
+/* css for footer starts*/
+  #socialmedia
+{ 
+    width: 50px;
+    height: 50px;
+    padding-bottom: 5px;
+    padding-top: 10px;
+    padding-left: 10px;
+}
+
+footer {
+  background-color: rgb(204, 199, 186);
+position: relative;
+bottom: 0px;
+width: 100%;
+line-height: 32px;
+
+}
+ .main-content {
+   display: flex;
+ }
+
+ .main-content .box {
+   flex-basis: 50%;
+   padding: 10px 20px;
+ }
+
+ .box .content {
+   margin: 20px 0 0 0;
+
+ }
+
+ .left .content {
+   margin: 20px 0 0 0;
+ }
+
+.center {
+  align-items: center;
+}
+
+
+/* disclamer for the project */
+.disclaimer {
+  text-align: center;
+  color: #FF0000;
+  background-color: #FFFF00;
+  font-size: 20px;
+  box-sizing: content-box;
+  width: 100%;
+}
+
+
+
+
+</style>
+</head>
+
+<!-- The body of web page starts --> 
+<body>
+  <!-- nav bar -->
+  <header> 
+<nav>
+<input type="checkbox" id="check">
+<label for="check" class="checkbtn"> 
+  <i class="fas fa-bars"> </i>
+</label>
+  <p class="name"> THE ELITES'S GALLEY</p>
+  <ul>
+    <li><a class ="active" href="index.html"> HOME </a></li>
+    <li><a href="about.html"> ABOUT US</a></li>
+    <li><a href="menu.html"> MENU </a></li>
+    <li><a href="reservation.html"> RESERVATIONS </a></li>
+    <li><a href="cards.html"> GIFTCARDS </a></li>
+    <li> <a href="Locate.html"> LOCATE US </a></li>
+    <li> <a href="Contact.html"> CONTACT US </a></li>
+  </ul>
+</nav>
+</header>
+
+
+<!-- parallax -->
+<div class="parallaxhome">
+</div>
+
+<!-- text in between the parallax -->
+<section>
+<center>
+<div class="elite">
+  <h2> WELCOME TO THE ELITE'S GALLEY</h2>
+  <p>"The Elite’s Galley, a modern day fine dine multi-cuisine restaurant is the perfect place to hangout with family & friends, 
+  is one of it’s kind. With an intention to create a landmark venue for all age groups and relish finger licking food always wanting
+for more."</p>
+</div>
+</center>
+</section>
+
+<!-- back to the top button -->
+<div class="arrow"> 
+  <button id="myBtn"> <a href="#top"> TOP </a></button>
+</div>
+
+<div class="parallaxhome1">
+  <div class="banner-text">
+    <h3> <p>DINE IN</p>TAKEWAWAY<p>HOME DELIVERY</p></h3>
+    
+  </div>
+</div>
+
+<!-- footer -->
+<footer>
+  <div class= "main-content">
+    <div class="left box">
+    <h3> Web Masters</h3>
+    <div class="content">
+      <p> Sarthak Batra  </p> 
+    <p>Radhika Aggi </p> 
+   <p>Harashdeep Singh Chahal  </p> 
+   <p>Sanil Paul </p>
+   </div>
+   </div>
+   <div class="center box">
+      <h3>  CONTACT US </h3>
+      <div class="content">
+      <p> The Elite’s Galley <br> <address> Ludhiana, Punjab, India </address>  </p>
+      <a href="mailto:theelitesgalleyldh@gmail.com"> <i>  Email us : theelitesgalleyldh@gmail.com </a>
+      <p> Phone: +91 1234 56780</p>
+    </div>
+  </div>
+   <div class="right box">
+     <div class="content">
+       <a href="#"><img src="images/508.png" id ="socialmedia" alt="accessiblitylogo"> </a>
+    <a href="https://www.facebook.com/" target="_blank"><img src="images/facebook.png" id="socialmedia" alt="Facebook Logo" > </a>
+    <a href="https://www.instagram.com/" target="_blank"><img src="images/instagram-logo.png" id="socialmedia" alt="Instagram-logo"></a>
+    <a href="https://twitter.com/" target="_blank"><img src="images/twitter.png" id="socialmedia" alt="Twitter"></a>
+   </div>
+   </div>
+  </div>
+  <br>
+  <center>
+    <p> &copy;2021 The Elite’s Galley - All Rights Reserved</p>
+  </center>
+  <br>
+  <!-- discLAIMER -->
+<p class="disclaimer"> "This is a project of CIS 145 , Web Publishing Course in UFV, Instructed and requested by Professor Lili Saghafi" </p>
+</footer>
+</body>
+</html>

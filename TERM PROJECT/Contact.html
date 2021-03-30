@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html lang="en">
+<!-- This program displays Contact us page  -->
+<head>
+<!-- Title is here -->
+<title> CONTACT US | The Elite’s Galley</title>
+<link rel="icon" href="images/logo1.jpg" type="image/x-icon">
+<!-- linking of the hamburger menu logo-->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css"/> 	
+<!-- meta tags are here --> 
+
+<meta charset="utf-8">
+<meta name="description" content="Restaurant  Page">
+<meta name="keywords" content="CIS 145,Web Engineering, UFV, Web development, Restaurant">
+<meta name="author" content="Sarthak Batra, Radhika Aggi, Harashdeep Singh Chahal, Sanil Paul"> 
+<meta name="robots" content="all"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<!-- internal CSS is here --> 
+
+<style>
+  /* universal selector */
+* { font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    margin: 0;
+    list-style: none;
+    text-decoration: none;
+    color: #000000;
+}
+body {
+    background-image: url(images/BG3.jpg);
+    background-size: contain;
+}
+
+/* Back to the top button*/
+#myBtn {
+  position: fixed;
+  bottom: 10px;
+  float: right;
+  right: 50.5%;
+  left: 90.25%;
+  max-width: 50px;
+  width: 10%;
+  font-size: 20px;
+  border-color: rgba(85, 85, 85, 0.2);
+  padding: .5px;
+  border-radius: 4px;
+  color: #ffff;
+  z-index: 10;
+}
+/* breadcrumb navigation css */
+.breadcrumbnavigation {position:relative;
+  float:left;
+  display:flex;
+  font-size:20px;
+
+}
+.breadcrumb {
+  padding: 0%;
+  margin-top: -50px;
+}
+.breadcrumb--items {
+display:inline;
+padding:40% 0 10% 20%;}
+.breadcrumb--items:not(:last-of-type)::after {
+content:'/';
+margin: 0 5px;
+color: #000000;
+
+}
+
+.breadcrumb--link {
+text-decoration:none;
+color: #ffff;
+}
+
+.breadcrumb--link--active {
+color:#000000;
+}
+
+.breadcrumb--link:hover {
+text-decoration:underline;
+}
+
+footer {
+     margin-top: 100px;
+}
+header {
+    background-color: cornsilk;
+}
+/* css for image */
+.parallax {
+    background-image: url(images/Contact.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    background-attachment: scroll ;
+    height: 500px;
+    margin-top: 150px;
+}
+  /* css for navigation bar  */
+  nav {
+    height: 80px;
+    background-color:  rgb(131, 129, 126);
+    z-index: 10;
+    position: fixed;
+    width: 100%;
+    margin-top: -150px;
+  }
+
+nav ul {
+    float: right;
+    margin-right: 20px;
+  }
+  
+  nav ul li , .name {
+    display: inline-block;
+    line-height: 80px;
+    margin: 0 5px;
+  }
+  .name  {
+    padding: 7px 13px;
+    font-size: 25px;
+  }
+  nav ul li a  {
+    font-size: 17px;
+    padding: 7px 13px;
+    border-radius: 3px;
+    color: blanchedalmond;
+    
+  }
+/* hovering effect */
+  nav a:hover { background: #b4a5a5;
+  }
+
+  .checkbtn {
+    font-size: 30px;
+    color: #ffff;
+    float:right;
+    line-height: 80px;
+    margin-right: 40px;
+    cursor: pointer;
+    display: none;
+  }
+
+  #check {
+    display: none;
+  }
+
+  /* media queries for differnt screens */
+  
+  @media (max-width: 952px) {
+    nav ul li a {
+      font-size: 12px;
+    }
+  }
+
+  @media (max-width: 1140px)  {
+    .checkbtn {
+      display: block;
+    }
+    ul {
+      position: relative;
+      width: 100%;
+      height: 100vh;
+      background: none;
+      text-align: center;
+      top: 0%;
+      left: -100%;
+      transition: all .5s;
+      background:  rgb(131, 129, 126);
+    }
+
+    nav ul li {
+      display: block;
+      margin: 50px 0;
+      line-height: 30px;
+    }
+    nav ul li a  {
+      font-size: 20px;
+    }
+
+    a:hover {
+      background: #b4a5a5;
+    }
+
+    #check:checked ~ ul {
+      left:0;
+    }
+    
+  }
+form {
+  background-color: rgba(245, 245, 220, 0.699);
+}
+h1 {
+  background-color: rgba(245, 245, 220, 0.699);
+  margin-top: 70px;
+}
+/* css for footer starts*/
+#socialmedia
+{ 
+    width: 50px;
+    height: 50px;
+    padding-bottom: 5px;
+    padding-top: 10px;
+    padding-left: 10px;
+}
+
+footer {
+  background-color: rgb(204, 199, 186);
+position: relative;
+bottom: 0px;
+width: 100%;
+line-height: 32px;
+
+}
+ .main-content {
+   display: flex;
+ }
+
+ .main-content .box {
+   flex-basis: 50%;
+   padding: 10px 20px;
+ }
+
+ .box .content {
+   margin: 20px 0 0 0;
+
+ }
+
+ .left .content {
+   margin: 20px 0 0 0;
+ }
+
+.center {
+  align-items: center;
+}
+
+
+/* disclamer for the project */
+.disclaimer {
+  text-align: center;
+  color: #FF0000;
+  background-color: #FFFF00;
+  font-size: 20px;
+  box-sizing: content-box;
+  width: 100%;
+}
+
+
+</style>
+
+</head>
+
+<!-- The body of web page starts here --> 
+
+<body>
+<header>
+    <nav>
+        <input type="checkbox" id="check">
+        <label for="check" class="checkbtn"> 
+          <i class="fas fa-bars"> </i>
+        </label>
+          <p class="name"> THE ELITES'S GALLEY</p>
+          <ul>
+            <li><a class ="active" href="index.html"> HOME </a></li>
+            <li><a href="about.html"> ABOUT US</a></li>
+            <li><a href="menu.html"> MENU </a></li>
+            <li><a href="reservation.html"> RESERVATIONS </a></li>
+            <li><a href="cards.html"> GIFTCARDS </a></li>
+            <li> <a href="Locate.html"> LOCATE US </a></li>
+            <li> <a href="Contact.html"> CONTACT US </a></li>
+          </ul>
+        </nav>
+</header>
+<!-- breadcrumb navigation -->
+<div class="breadcrumbnavigation">
+  <ul class="breadcrumb">
+    <li class="breadcrumb--items">
+      <a href="index.html" class="breadcrumb--link">HOME</a>
+    </li>
+  </ul>
+<ul class="breadcrumb">
+    <li class="breadcrumb--items">
+      <a href="Contact.html" class="breadcrumb--link breadcrumb--link--active"> CONTACT US </a>
+    </li>
+  </ul>
+
+</div>
+    <div class="parallax"> </div>
+<center>
+  <!--  form  -->
+    <h1>Contact Us</h1>
+    <form method="POST" action="https://webdevbasics.net/scripts/demo.php">
+    <fieldset>
+      <legend>
+        Customer Information
+      </legend>
+    <label>First Name: <input type="text" placeholder="First Name" required name="fname" id="fname"></label><br><br>
+    <label>Last Name: <input type="text" placeholder="Last Name" required name="lname" id="lname"></label><br><br>
+    <label>E-mail: <input type="text" placeholder="E-mail" required name="email" id="email"></label><br><br>
+    </fieldset>
+    <label for="comments">Comments:</label><br>
+    <textarea name="comments"placeholder="Additional Comments" required  id="comments" rows="4" cols="40"></textarea><br><br>
+    <input type="submit" value="Contact"> <input type="reset">
+    </form>
+</center>
+<div class="arrow"> 
+  <button id="myBtn"> <a href="#top"> TOP </a></button>
+</div>
+<!-- footer -->
+<footer>
+  <div class= "main-content">
+    <div class="left box">
+    <h3> Web Masters</h3>
+    <div class="content">
+      <p> Sarthak Batra  </p> 
+    <p>Radhika Aggi </p> 
+   <p>Harashdeep Singh Chahal  </p> 
+   <p>Sanil Paul </p>
+   </div>
+   </div>
+   <div class="center box">
+      <h3>  CONTACT US </h3>
+      <div class="content">
+      <p> The Elite’s Galley <br> <address> Ludhiana, Punjab, India </address>  </p>
+      <a href="mailto:theelitesgalleyldh@gmail.com"> <i>  Email us : theelitesgalleyldh@gmail.com </a>
+      <p> Phone: +91 1234 56780</p>
+    </div>
+  </div>
+   <div class="right box">
+     <div class="content">
+       <a href="#"><img src="images/508.png" id ="socialmedia" alt="accessiblitylogo"> </a>
+    <a href="https://www.facebook.com/" target="_blank"><img src="images/facebook.png" id="socialmedia" alt="Facebook Logo" > </a>
+    <a href="https://www.instagram.com/" target="_blank"><img src="images/instagram-logo.png" id="socialmedia" alt="Instagram-logo"></a>
+    <a href="https://twitter.com/" target="_blank"><img src="images/twitter.png" id="socialmedia" alt="Twitter"></a>
+   </div>
+   </div>
+  </div>
+  <br>
+  <center>
+    <p> &copy;2021 The Elite’s Galley - All Rights Reserved</p>
+  </center>
+  <br>
+  <!-- disclaimer -->
+<p class="disclaimer"> "This is a project of CIS 145 , Web Publishing Course in UFV, Instructed and requested by Professor Lili Saghafi" </p>
+</footer>
+    
+</body>
+</html>
